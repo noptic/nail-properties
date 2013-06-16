@@ -5,12 +5,10 @@
 # Licensed under the MIT license.
 module.exports.augment = (newClass,definition,nail) ->
   newClass::get = (name) ->
-    return @_properties[name]
+    return @['_'+name]
   newClass::set = (name,value) ->
-    @_properties[name] = value
+    @['_'+name] = value
     return this
-  if !(newClass::_properties?)
-    newClass::_properties = {}
   definition.properties = definition.properties ? {}
   for name,defaultValue of definition.properties
     newClass::['_'+name] = defaultValue

@@ -32,6 +32,12 @@ module.exports =
       test.ok (_.isFunction @instance.set), "'set' must be a function"
       test.done()
 
+    "get returns default value": (test) ->
+      test.expect 1
+      test.equal @instance.sampleText(), "semper sit",
+        "Must return the default value"
+      test.done()
+
     "combined get/set method created": (test) ->
       test.expect 2
       test.ok (_.isFunction @instance.sampleText),

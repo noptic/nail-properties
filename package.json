@@ -1,7 +1,7 @@
 {
     "name": "nail-properties",
     "description": "creates  generic get and set methods and combined get/ set methods for object properties",
-    "version": "0.0.1-alpha1",
+    "version": "0.0.2",
     "homepage": "https://github.com/noptic/nail-properties",
     "author": {
         "name": "noptic",
