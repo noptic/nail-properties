@@ -1,7 +1,7 @@
 {
     "name": "nail-properties",
     "description": "creates  generic get and set methods and combined get/ set methods for object properties",
-    "version": "0.0.3",
+    "version": "0.1.0alpha1",
     "homepage": "https://github.com/noptic/nail-properties",
     "author": {
         "name": "noptic",
@@ -27,14 +27,14 @@
     "scripts": {
         "test": "grunt nodeunit"
     },
+    "dependencies": {
+        "underscore": "*"
+    },
     "devDependencies": {
         "grunt-contrib-coffee": "0.4.0rc7",
-        "grunt-contrib-concat": "0.1.2rc6",
-        "grunt-contrib-uglify": "0.1.1rc6",
         "grunt-contrib-nodeunit": "0.1.2rc6",
         "grunt-contrib-watch": "0.2.0rc5",
         "grunt": "0.4.0rc7",
-        "underscore": "*",
-        "nail-core": "*"
+        "underscore": "*"
     }
 }

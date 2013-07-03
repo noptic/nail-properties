@@ -2,16 +2,6 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
-    concat:
-      dist:
-        src: ['lib/nail-properties.js']
-        dest: 'dist/nail-properties.js'
-
-    uglify:
-      dist:
-        src: 'dist/nail-properties.js',
-        dest: 'dist/nail-properties.min.js'
-
     coffee:
       glob_to_multiple:
         expand: true
@@ -35,9 +25,7 @@ module.exports = (grunt) ->
         tasks: ['nodeunit']
 
   grunt.loadNpmTasks 'grunt-contrib-concat'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-nodeunit'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['coffee', 'nodeunit', 'concat', 'uglify']
+  grunt.registerTask 'default', ['coffee', 'nodeunit']
