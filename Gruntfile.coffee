@@ -24,7 +24,7 @@ module.exports = (grunt) ->
         files: ['test/**/*.coffee']
         tasks: ['nodeunit']
 
-  grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-nodeunit'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 

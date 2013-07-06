@@ -13,7 +13,7 @@ module.exports =
     if _.isUndefined(newClass::set)
       newClass::set = @generic.set
 
-    newClass.definition.properties = definition.properties ? {}
+    newClass.definition.properties = newClass.definition.properties ? {}
     for name,defaultValue of newClass.definition.properties
       @api.addProperty newClass.prototype, name, defaultValue
     return this

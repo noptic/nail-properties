@@ -18,7 +18,7 @@ module.exports =
       @classDefinition =
         properties:
           sampleText: "semper sit"
-      nail.to @classes, testClass: @classDefinition
+      nail.to @classes, 'test', testClass: @classDefinition
       @instance = new @classes.testClass()
       done()
 
