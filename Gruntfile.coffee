@@ -3,15 +3,21 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON('package.json')
 
     coffee:
-      glob_to_multiple:
+      source:
         expand: true
         cwd: 'src'
         src: ['*.coffee']
         dest: 'lib'
         ext: '.js'
+      specs:
+        expand: true
+        cwd: 'specs'
+        src: ['*.coffee.md']
+        dest: 'test'
+        ext: '_spec.js'
 
     nodeunit:
-      files: ['test/**/*_test.coffee']
+      specs: ['test/**/*_spec.js']
 
     watch:
       src:

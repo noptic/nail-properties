@@ -6,12 +6,19 @@
 
 _ = require 'underscore'
 
+helpers =
+  get: (name) ->
+    return @[name]
+  set: (name,value) ->
+    @[name] = value
+    return this
+
 module.exports =
   augment:  (newClass) ->
     if _.isUndefined(newClass::get)
-      newClass::get = @generic.get
+      newClass::get = helpers.get
     if _.isUndefined(newClass::set)
-      newClass::set = @generic.set
+      newClass::set = helpers.set
 
     newClass.definition.properties = newClass.definition.properties ? {}
     for name,defaultValue of newClass.definition.properties
@@ -31,9 +38,11 @@ module.exports =
       return this
     escapeName: (name) -> "_#{name}"
 
-  generic:
-    get: (name) ->
-      return @[name]
-    set: (name,value) ->
-      @[name] = value
-      return this
+  lib:
+    Mould: class Mould
+      init:(properties) ->
+        for name,value of properties
+          @[name] value
+        return this
+
+

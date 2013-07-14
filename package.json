@@ -1,41 +1,42 @@
 {
-    "name": "nail-properties",
-    "description": "creates  generic get and set methods and combined get/ set methods for object properties",
-    "version": "0.1.0alpha2",
-    "homepage": "https://github.com/noptic/nail-properties",
-    "author": {
-        "name": "noptic",
-        "email": "oliver@ananit.de"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/noptic/nail-properties.git"
-    },
-    "bugs": {
-        "url": "https://github.com/noptic/nail-properties/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/noptic/nail-properties/blob/master/LICENSE-MIT"
-        }
-    ],
-    "main": "lib/nail-properties",
-    "engines": {
-        "node": ">= 0.6.0"
-    },
-    "scripts": {
-        "test": "grunt nodeunit"
-    },
-    "dependencies": {
-        "underscore": "*"
-    },
-    "devDependencies": {
-        "grunt-contrib-coffee": "0.4.0rc7",
-        "grunt-contrib-nodeunit": "0.1.2rc6",
-        "grunt-contrib-watch": "0.2.0rc5",
-        "grunt": "0.4.0rc7",
-        "underscore": "*",
-        "nail-core": "0.1.0alpha1"
+  "name": "nail-properties",
+  "description": "Add properties to nail classes",
+  "version": "0.1.0alpha3",
+  "homepage": "https://github.com/noptic/nail-properties",
+  "author": {
+    "name": "noptic",
+    "email": "oliver@ananit.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noptic/nail-properties.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noptic/nail-properties/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/noptic/nail-properties/blob/master/LICENSE-MIT"
     }
+  ],
+  "main": "lib/nail-properties",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "0.7.0",
+    "grunt-contrib-nodeunit": "0.1.2rc6",
+    "grunt-contrib-watch": "0.2.0rc5",
+    "grunt": "0.4.0",
+    "underscore": "*",
+    "nail-core": "0.1.0alpha3",
+    "nail-extend": "0.1.0alpha1"
+  }
 }
